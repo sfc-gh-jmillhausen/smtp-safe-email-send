@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "safe-email-send"
+version = "0.1.0"
+description = "Approval-gated local SMTP queue and read-only IMAP observer"
+requires-python = ">=3.11"
+dependencies = ["keyring>=25.6,<26"]
+
+[project.scripts]
+safe-email-send = "safe_email_send.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3,<9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/safe_email_send"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "skills", "docs", "examples", "tests", "README.md", "pyproject.toml", "uv.lock", ".env.example", ".gitignore"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

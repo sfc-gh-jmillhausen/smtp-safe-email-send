@@ -1,0 +1,11 @@
+{
+  "scope": "individual",
+  "messages": [
+    {
+      "to": "recipient@example.org",
+      "subject": "Example for preview only",
+      "text": "Hello,\n\nThis is a sample unsigned message. Replace it before any real use.",
+      "source_id": "example-preview-001"
+    }
+  ]
+}

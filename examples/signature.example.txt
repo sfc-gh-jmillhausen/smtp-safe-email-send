@@ -1,0 +1,3 @@
+Example Sender
+Example Role | Example Company
+sender@example.com
